@@ -133,7 +133,8 @@ export const EXPERIENCE: TimelineEntry[] = [
 ];
 
 export type GalleryImage = {
-  id: string; // also used as the picsum seed so images stay stable
+  id: string;
+  src: string;
   name: string;
   alt: string;
   w: number;
@@ -142,17 +143,10 @@ export type GalleryImage = {
 
 // Mixed aspect ratios give the masonry layout its rhythm
 export const GALLERY: GalleryImage[] = [
-  { id: "kat-01", name: "frame_01.jpg", alt: "Gallery photo 1", w: 800, h: 1000 },
-  { id: "kat-02", name: "frame_02.jpg", alt: "Gallery photo 2", w: 800, h: 600 },
-  { id: "kat-03", name: "frame_03.jpg", alt: "Gallery photo 3", w: 800, h: 800 },
-  { id: "kat-04", name: "frame_04.jpg", alt: "Gallery photo 4", w: 800, h: 1100 },
-  { id: "kat-05", name: "frame_05.jpg", alt: "Gallery photo 5", w: 800, h: 650 },
-  { id: "kat-06", name: "frame_06.jpg", alt: "Gallery photo 6", w: 800, h: 900 },
-  { id: "kat-07", name: "frame_07.jpg", alt: "Gallery photo 7", w: 800, h: 700 },
-  { id: "kat-08", name: "frame_08.jpg", alt: "Gallery photo 8", w: 800, h: 1000 },
-  { id: "kat-09", name: "frame_09.jpg", alt: "Gallery photo 9", w: 800, h: 600 },
+  { id: "khyle-01", src: "/images/gallery-01.jpg", name: "B42D8973.jpg", alt: "A moment from Khyle's gallery", w: 828, h: 1472 },
+  { id: "khyle-02", src: "/images/gallery-02.jpg", name: "IMG_0809.jpg", alt: "A moment from Khyle's gallery", w: 3024, h: 4032 },
+  { id: "khyle-03", src: "/images/gallery-03.jpg", name: "IMG_2428.jpg", alt: "A moment from Khyle's gallery", w: 3024, h: 4032 },
+  { id: "khyle-04", src: "/images/gallery-04.jpg", name: "IMG_2502.jpg", alt: "A moment from Khyle's gallery", w: 3024, h: 4032 },
+  { id: "khyle-05", src: "/images/gallery-05.jpg", name: "IMG_5156.jpg", alt: "A moment from Khyle's gallery", w: 1620, h: 2880 },
+  { id: "khyle-06", src: "/images/gallery-06.jpg", name: "IMG_5286.jpg", alt: "A moment from Khyle's gallery", w: 2268, h: 4032 },
 ];
-
-// Swap this helper for your own image URLs when you have real photos
-export const picsum = (seed: string, w: number, h: number) =>
-  `https://picsum.photos/seed/${seed}/${w}/${h}`;

@@ -8,7 +8,7 @@ export default function GalleryPage() {
   return (
     <section className="py-16">
       <PageHeading title="gallery">
-        Nine frames. Click any image to open it full size, then use the arrow
+        Six frames. Click any image to open it full size, then use the arrow
         keys to move between them.
       </PageHeading>
       <GalleryGrid />

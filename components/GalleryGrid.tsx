@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { GALLERY, picsum } from "@/lib/data";
+import { GALLERY } from "@/lib/data";
 
 // Masonry grid (CSS columns) plus a keyboard-friendly lightbox modal
 export default function GalleryGrid() {
@@ -59,7 +59,7 @@ export default function GalleryGrid() {
             className="group relative mb-4 block w-full break-inside-avoid overflow-hidden rounded-lg border border-line bg-panel transition duration-300 hover:border-accent/70 hover:shadow-glow"
           >
             <Image
-              src={picsum(img.id, img.w, img.h)}
+              src={img.src}
               alt={img.alt}
               width={img.w}
               height={img.h}
@@ -118,7 +118,7 @@ export default function GalleryGrid() {
           <figure onClick={(e) => e.stopPropagation()} className="max-w-5xl">
             <Image
               key={current.id}
-              src={picsum(current.id, current.w * 2, current.h * 2)}
+              src={current.src}
               alt={current.alt}
               width={current.w}
               height={current.h}

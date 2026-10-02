@@ -14,7 +14,7 @@ const config: Config = {
         dim: "#6c7f72", // secondary text
       },
       fontFamily: {
-        mono: ["var(--font-mono)", ...fontFamily.mono],
+        mono: ["JetBrains Mono", ...fontFamily.mono],
       },
       boxShadow: {
         glow: "0 0 28px -6px rgba(57,255,106,0.45)",

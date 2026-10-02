@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHeading from "@/components/PageHeading";
 import SkillBar from "@/components/SkillBar";
 import Timeline from "@/components/Timeline";
@@ -11,19 +12,31 @@ export default function AboutPage() {
     <section className="py-16">
       <PageHeading title="about" />
 
-      {/* Bio */}
-      <div className="max-w-2xl space-y-5 leading-relaxed text-fg">
-        <p>
-          I am a junior full-stack developer who enjoys the whole path of a
-          feature, from the database table to the button someone clicks. I
-          started with small HTML pages, then moved to React and Node because I
-          wanted to build things that remember what you did.
-        </p>
-        <p className="text-dim">
-          Right now I am focused on TypeScript, clean API design and interfaces
-          that feel quick on slow connections. I learn best by shipping, so most
-          of what I know comes from projects I broke and then fixed.
-        </p>
+      {/* Portrait and bio */}
+      <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(260px,1fr)]">
+        <div className="space-y-5 leading-relaxed text-fg">
+          <p>
+            I am a junior full-stack developer who enjoys the whole path of a
+            feature, from the database table to the button someone clicks. I
+            started with small HTML pages, then moved to React and Node because I
+            wanted to build things that remember what you did.
+          </p>
+          <p className="text-dim">
+            Right now I am focused on TypeScript, clean API design and interfaces
+            that feel quick on slow connections. I learn best by shipping, so most
+            of what I know comes from projects I broke and then fixed.
+          </p>
+        </div>
+        <figure className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-lg border border-line bg-panel shadow-glow">
+          <Image
+            src="/images/khyle-portrait.jpg"
+            alt="Khyle Guadalquiver"
+            fill
+            priority
+            sizes="(min-width: 1024px) 33vw, 100vw"
+            className="object-cover"
+          />
+        </figure>
       </div>
 
       {/* Skills */}
